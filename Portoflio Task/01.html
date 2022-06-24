@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            font-size: 20px;
+        }
+
+        .column1 h3 {
+            margin-left: 288px;
+        }
+
+        .profile-image img {
+            margin-left: 250px;
+            margin-top: 20px;
+
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+
+        }
+
+
+        .logos-images img {
+           
+
+            display: flex;
+            flex-direction: column;
+            margin-left: 130px;
+            margin-top: 10px;
+            border: 5px snow solid;
+            border-top-left-radius: 150px;
+            border-bottom-left-radius: 150px;
+
+
+
+
+
+        }
+
+        .inline {
+
+            display: flex;
+         
+
+
+        }
+
+        .column1 {
+            background-color: antiquewhite;
+            border-radius: 30px;
+
+        }
+
+        .column1 div h3 {
+            background-color: white;
+            width: 150px;
+            border-radius: 50px;
+            padding: 10px 15px;
+
+
+
+        }
+
+        .column1 h2 {
+            font-size: 3em;
+        }
+
+        button {
+            background-color: darksalmon;
+            margin-left: 30px;
+            margin-top: 10px;
+            border-radius: 50px;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            
+        }
+        
+
+        /* .column5 button {
+
+            background-color: darksalmon;
+            margin-left: 30px;
+            margin-top: 10px;
+            border-radius: 50px;
+            padding: 10px 15px;
+            margin-bottom: 20px;
+        } */
+
+
+        h3::after {
+            content: '';
+            margin-top: 10px;
+            display: block;
+            width: 30px;
+            border-bottom: 10px solid #FF5959;
+            margin-left: 5px;
+            border-radius: 10px;
+
+
+
+        }
+        .parent1 h6{
+            content: "";
+            border-bottom: gray solid 10px;
+            opacity: 50%;
+            width: 30px;
+            margin-left: 30px;
+            border-radius: 10px;
+        }
+
+
+
+        .first-child {
+            border-radius: 15px;
+            background-color: bisque;
+            border: 15px solid bisque;
+            margin: 15px 15px;
+            box-shadow: black 15px;
+
+
+        }
+
+        .first-child2 {
+            margin-top: 70px;
+            margin-right: 20px;
+            background-color: bisque;
+            border-radius: 15px;
+
+
+
+        }
+
+        .parent1 {
+            display: flex;
+        }
+
+        .second-child {
+            border-radius: 15px;
+            background-color: bisque;
+            border: 15px solid bisque;
+            margin: 15px 15px;
+
+
+        }
+
+        .second-child2 {
+            margin-top: 70px;
+            margin-right: 20px;
+            background-color: bisque;
+            border-radius: 15px;
+            border: 15px solid bisque;
+
+
+        }
+
+        .parent2 {
+            display: flex;
+        }
+
+        .third-child {
+            border-radius: 15px;
+            background-color: bisque;
+            border: 15px solid bisque;
+            margin: 15px 15px;
+
+
+        }
+
+        .third-child2 {
+            margin-top: 70px;
+            margin-right: 20px;
+            background-color: bisque;
+            border-radius: 15px;
+            border: 15px solid bisque;
+
+
+        }
+
+        .parent3 {
+            display: flex;
+        }
+
+        .column3 {
+            background-color: antiquewhite;
+        }
+
+        .column3 img {
+            border-radius: 50%;
+        }
+
+        .column4 {
+            margin-left: 170px;
+        }
+
+        .first-circle {
+            border: solid 5px darksalmon;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            padding: 40px 30px;
+            text-align: center;
+            font-size: 3ch;
+            margin-left: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+
+
+        }
+
+        .second-circle {
+            border: solid 5px darksalmon;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            padding: 30px 30px;
+            text-align: center;
+            font-size: 4ch;
+            margin-left: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .third-circle {
+            border: solid 5px darksalmon;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            padding: 30px 30px;
+            text-align: center;
+            font-size: 4ch;
+            margin-left: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .fourth-circle {
+            border: solid 5px darksalmon;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            padding: 25px 5px 1px 3px;
+            text-align: center;
+            font-size: 4ch;
+            margin-left: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .column6 {
+
+            background-color: antiquewhite;
+            padding: 5px 5px;
+        }
+
+        .column6 div {
+            margin-top: 20px;
+        }
+
+        .column6 div:first-child {
+            background-color: #C18956;
+            border: 10px grey solid;
+        }
+
+        .first-logo-textarea {
+
+            padding: 20px 20px 20px 20px;
+            margin: 10px 10px;
+
+        }
+
+        .First-TextArea-Parent {
+            margin-left: 5px;
+            margin-right: 20px;
+            margin-bottom: 50px;
+            width: 97%;
+            display: flex;
+            background-color: antiquewhite;
+            border-radius: 50px;
+            padding: 5px 5px;
+
+
+
+        }
+
+        .MartinImageParent img {
+            height: 80px;
+            margin: 10px 10px;
+
+
+
+
+        }
+
+        .MartinText h4 {
+            margin-top: 30px;
+
+
+
+        }
+
+        .MartinText h6 {
+            margin-top: 10px;
+        }
+
+        .MartinImageParent {
+            background-color: snow;
+            display: flex;
+
+            margin-right: 20px;
+            margin-top: 50px;
+            margin-left: 200px;
+            margin-bottom: 50px;
+        }
+
+        .column9{
+            background-color: antiquewhite;
+            border-radius: 30px;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+        .column9 div{
+            font-size: 2.5rem;
+            border: 10px solid black;
+            background-color: darksalmon;
+            border-radius: 30px;
+            padding:5px 5px;
+
+           
+        }
+        .inline2{
+            display: flex;
+            margin-left: 80px;
+            margin-right: 80px;
+           
+            justify-content: space-between;
+        }
+        .column11{
+            margin-top: 20px;
+            border-radius: 20px;
+            padding: 40px 40px;
+            background-color:antiquewhite ;
+        }
+      
+    </style>
+
+
+</head>
+<body>
+    <div class="row">
+        <div class=column1>
+            <div>
+                <h3> JHON DOE </h3>
+            </div>
+            <div class="inline">
+                <div class="profile-image">
+                    <img src="assets/Layer 20.jpg" alt="Profile-Photo">
+                </div>
+                <div class="logos-images">
+                    <img src="assets/Layer 21.jpg" alt="1st-logo">
+                    <img src="assets/Layer 22.jpg" alt="2nd-logo">
+                    <img src="assets/Layer 23.jpg" alt="3rd-logo">
+                    <img src="assets/Layer 24.jpg" alt="4th-logo">
+                    <img src="assets/Layer 25.jpg" alt="5th-logo">
+                </div>
+
+                    
+                
+            </div>
+            <p> Hello</p>
+            <h2> I'M JHON DOE</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem iste ullam commodi laborum reiciendis
+                dolorum, a harum excepturi autem veniam impedit ipsum neque libero eius doloribus blanditiis quod cum
+                repudiandae impedit ipsam possimus, accusantium quisquam dicta nisi.</p>
+            <button>
+
+                Download CV
+            </button>
+
+
+
+        </div>
+        <div class="column2">
+            <h2>
+                What
+            </h2>
+            <h3>
+                I Love To Do
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, doloremque omnis corrupti cumque,
+                eveniet deserunt, modi quam sapiente perspiciatis dolore harum ipsa hic doloribus animi tempore minus
+                repellendus laborum aliquam.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic laborum necessitatibus ut nulla eos dolor
+                obcaecati eaque. Et, voluptas architecto similique beatae blanditiis quidem aliquam molestiae officia
+                delectus magnam expedita.</p>
+            <button>
+                See More
+            </button>
+        </div>
+        <div class=column3>
+            <div class="parent1">
+                <div class="first-child">
+                    <img src="assets/Layer 3.jpg" alt="Graphic-Design-Logo">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum sint dolorum magnam quod aut
+                        eius.</p>
+                    <h2> Graphic Design</h2>
+
+                </div>
+                <div class="first-child2">
+                    <img src="assets/Layer 2.jpg" alt="Graphic-Design-Logo">
+                    <h2> Digital Marketing</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum sint dolorum magnam quod aut
+                        eius.</p>
+
+                </div>
+
+
+            </div>
+            <div class="parent2">
+                <div class="second-child">
+                    <img src="assets/Layer 5.jpg" alt="Graphic-Design-Logo">
+                    <h2> Website Design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum sint dolorum magnam quod aut
+                        eius.</p>
+
+                </div>
+                <div class="second-child2">
+                    <img src="assets/Layer 4.jpg" alt="Graphic-Design-Logo">
+                    <h2> Ul / UX Design</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum sint dolorum magnam quod aut
+                        eius.</p>
+
+                </div>
+
+
+            </div>
+            <div class="parent3">
+                <div class="third-child">
+                    <img src="assets/Layer 7.jpg" alt="Graphic-Design-Logo">
+                    <h2> Photography</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum sint dolorum magnam quod aut
+                        eius.</p>
+
+                </div>
+                <div class="third-child2">
+                    <img src="assets/Layer 6.jpg" alt="Graphic-Design-Logo">
+                    <h2> Social Media Activity</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum sint dolorum magnam quod aut
+                        eius.</p>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <div class="column4">
+            <img src="assets/Layer 8.jpg" alt="1st-Image">
+            <img src="assets/Layer 9.jpg" alt="2nd-Image">
+            <img src="assets/Layer 10.jpg" alt="3rd-Image">
+            <img src="assets/Layer 11.jpg" alt="4th-Image">
+            <img src="assets/Layer 12.jpg" alt="5th-Image">
+            <img src="assets/Layer 13.jpg" alt="6th-Image">
+
+
+        </div>
+        <div class="column5">
+            <h2>
+                CHECK OUT
+            </h2>
+            <h3>
+                MY CREATIVE WORK
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt animi fugit laboriosam quasi, velit
+                similique doloribus non mollitia esse rem sed nemo tempora consequuntur repellendus totam corporis
+                numquam provident pariatur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod consequatur quidem, officia quae vero
+                maxime dicta ad accusamus! Perspiciatis odit corrupti vero corporis amet sint quia voluptas quam in
+                dolorem.</p>
+            <button>
+                See More
+            </button>
+
+
+        </div>
+        <div class="column6">
+            <div class="first-circle">
+                2380 Projects
+
+            </div>
+            <div class="second-circle">
+                250 Clients
+            </div>
+            <div class="third-circle">
+                1400 HOURS
+            </div>
+            <div class="fourth-circle">
+                570 AWARDS
+            </div>
+
+        </div>
+        <div class="column7">
+            <div>
+                <h2>WHY YOU</h2>
+                <h3>SHOULD HIRE ME </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis tenetur odio blanditiis corporis
+                    inventore enim unde esse. Inventore dolore repellendus ea, laboriosam similique, omnis incidunt,
+                    nemo eos soluta accusamus amet.</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci aut autem nostrum perspiciatis,
+                    esse soluta voluptates iste odio! Consequatur autem quibusdam ad ipsum saepe et reiciendis, dicta
+                    maiores similique vel.</p>
+                <button>HIRE ME</button>
+            </div>
+            <div class="First-TextArea-Parent">
+                <div class="first-logo-textarea">
+                    <img src="assets/Layer 14.jpg" alt="Graphic-Designer-At-Welvo-logo">
+
+                </div>
+                <div class="first-text-textarea">
+                    <h4>Graphic Designer at Welvo pvt. Ltd </h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quisquam eos id quibusdam cupiditate
+                        nesciunt minima voluptas sunt quos repellat, aliquam voluptatem nisi aperiam tempore similique
+                        temporibus repellendus. At, earum.</p>
+
+
+                </div>
+
+            </div>
+            <div class="First-TextArea-Parent">
+                <div class="first-logo-textarea">
+                    <img src="assets/Layer 4.jpg" alt="Graphic-Designer-At-Welvo-logo">
+
+                </div>
+                <div class="first-text-textarea">
+                    <h4>Website Designer At Thembak Infotech </h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quisquam eos id quibusdam cupiditate
+                        nesciunt minima voluptas sunt quos repellat, aliquam voluptatem nisi aperiam tempore similique
+                        temporibus repellendus. At, earum.</p>
+
+
+                </div>
+
+            </div>
+            <div class="First-TextArea-Parent">
+                <div class="first-logo-textarea">
+                    <img src="assets/Layer 16.jpg" alt="Graphic-Designer-At-Welvo-logo">
+
+                </div>
+                <div class="first-text-textarea">
+                    <h4>UI / Ux Designer at Felvanto Technologies </h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quisquam eos id quibusdam cupiditate
+                        nesciunt minima voluptas sunt quos repellat, aliquam voluptatem nisi aperiam tempore similique
+                        temporibus repellendus. At, earum.</p>
+
+
+                </div>
+
+            </div>
+            <div class="First-TextArea-Parent">
+                <div class="first-logo-textarea">
+                    <img src="assets/Layer 17.jpg" alt="Graphic-Designer-At-Welvo-logo">
+
+                </div>
+                <div class="first-text-textarea">
+                    <h4>Social Media Activist At Metako Infotech </h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quisquam eos id quibusdam cupiditate
+                        nesciunt minima voluptas sunt quos repellat, aliquam voluptatem nisi aperiam tempore similique
+                        temporibus repellendus. At, earum.</p>
+
+
+                </div>
+
+            </div>
+            <div class="First-TextArea-Parent">
+                <div class="first-logo-textarea">
+                    <img src="assets/Layer 18.jpg" alt="Graphic-Designer-At-Welvo-logo">
+
+                </div>
+                <div class="first-text-textarea">
+                    <h4>Professional Photographer </h4>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At quisquam eos id quibusdam cupiditate
+                        nesciunt minima voluptas sunt quos repellat, aliquam voluptatem nisi aperiam tempore similique
+                        temporibus repellendus. At, earum.</p>
+
+
+                </div>
+
+            </div>
+        </div>
+        <div class="column8">
+            <h4> WHAT MY </h4>
+            <h4> CLIENTS ARE</h4>
+            <h3> SAYING </h3>
+            <div class="MartinImageParent">
+
+                <img src="assets/Layer 19.jpg" alt="Martin-Image">
+
+
+                <div class="MartinText">
+                    <h4>Martin LUTHOR </h4>
+                    <h6>CEO OF Themofark</h6>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quo non itaque repellendus a
+                        saepe ut earum maiores cum molestias in delectus harum nemo voluptas eius voluptatum inventore,
+                        dicta aspernatur.</p>
+                        <div class="parent1" >
+                            <h3>
+                   
+                            </h3>
+                            <h6>
+    
+                            </h6>
+
+                        </div>
+                       
+
+                </div>
+               
+
+
+
+            </div>
+            
+
+            
+
+
+        </div>
+        <div class="column9">
+            <pre>
+ Do You Have Any Interesting Work ?Send You Message at
+                <div>marioguirguis9@gmail.com</div>
+
+            </pre>
+            <button>
+                Submit
+            </button>
+        </div>
+        <div class="column10">
+            <pre style="font-style: italic; font-weight: bold; ">
+Home                Services                Portofolio          Review              Contact
+            </pre>
+            <div class="inline2">
+                <div>
+                    <img src="assets/Layer 21.jpg" alt="Logo-1">
+
+                </div>
+                <div>
+                    <img src="assets/Layer 22.jpg" alt="Logo-1">
+
+                </div>
+                <div>
+                    <img src="assets/Layer 23.jpg" alt="Logo-1">
+
+                </div>
+                <div>
+                    <img src="assets/Layer 24.jpg" alt="Logo-1">
+
+                </div>
+                <div>
+                    <img src="assets/Layer 25.jpg" alt="Logo-1">
+
+                </div>
+            </div>
+        </div>
+        <div class="column11">
+            <div>
+                copyright@tagbrothers 2022 all rights & reserved 
+            </div>
+
+        </div>
+    </div>   
+
+
+</body>
+
+</html>
